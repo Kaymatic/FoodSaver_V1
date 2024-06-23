@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const listingsContainer = document.getElementById('listings-container');
     if (listingsContainer) {
         const listings = [
-            { id: 1, title: 'Fresh Apples', description: 'Delicious and juicy apples', location: 'New York' },
-            { id: 2, title: 'Bananas', description: 'Ripe bananas perfect for snacks', location: 'California' },
+            { id: 1, title: 'Breakfast Meals', description: 'Cocoa Drink with Omelette and Bread', location: 'Accra City Hotel' },
+            { id: 2, title: 'Supper Meals', description: 'Jollof, Plain Rice, Banku with various proteins', location: 'Accra Central' },
             // Add more listings as needed
         ];
 
