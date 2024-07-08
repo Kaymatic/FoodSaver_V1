@@ -1,19 +1,16 @@
 const express = require('express');
-const router = express.Router();
 const Listing = require('../models/listing');
 
-// Mock listings data
-let listings = [];
+const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.json(listings);
-});
-
-router.post('/', (req, res) => {
-    const { title, description, location } = req.body;
-    const newListing = new Listing(title, description, location);
-    listings.push(newListing);
-    res.status(201).json(newListing);
+// Get all listings
+router.get('/', async (req, res) => {
+    try {
+        const listings = await Listing.find();
+        res.status(200).json({ success: true, listings });
+    } catch (error) {
+        res.status(500).json({ message: 'Something went wrong', error });
+    }
 });
 
 module.exports = router;

@@ -1,0 +1,36 @@
+foodsaver/
+│
+├── public/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   ├── signup.js
+│   │   ├── login.js
+│   │   ├── forgot-password.js
+│   │   ├── add-item.js
+│   │   ├── request-item.js
+│   │   └── listings.js
+│   └── images/
+│       └── logo.png
+├── views/
+│   ├── index.html
+│   ├── signup.html
+│   ├── login.html
+│   ├── forgot-password.html
+│   ├── listings.html
+│   ├── add-item.html
+│   └── request-item.html
+├── server/
+│   ├── app.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── listings.js
+│   │   ├── add-items.js
+│   │   └── request-items.js
+│   └── models/
+│       ├── user.js
+│       └── listing.js
+├── .gitignore
+├── README.md
+├── package.json
+└── .env

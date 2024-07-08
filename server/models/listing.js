@@ -1,9 +1,9 @@
-class Listing {
-    constructor(title, description, location) {
-        this.title = title;
-        this.description = description;
-        this.location = location;
-    }
-}
+const mongoose = require('mongoose');
 
-module.exports = Listing;
+const listingSchema = new mongoose.Schema({
+    title: { type: String, required: true },
+    description: { type: String, required: true },
+    imageUrl: { type: String, required: true }
+});
+
+module.exports = mongoose.model('Listing', listingSchema);
