@@ -1,37 +1,26 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const cors = require('cors');
-const dotenv = require('dotenv');
-const multer = require('multer');
-const path = require('path');
-
-dotenv.config();
-
-const app = express();
-
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
-
-// Routes
 const authRoutes = require('./routes/auth');
 const listingsRoutes = require('./routes/listings');
-const addItemsRoutes = require('./routes/add-items');
-const requestItemsRoutes = require('./routes/request-items');
+const requestRoutes = require('./routes/request');
+require('dotenv').config();
 
-app.use('/api/auth', authRoutes);
-app.use('/api/listings', listingsRoutes);
-app.use('/api/add-items', addItemsRoutes);
-app.use('/api/request-items', requestItemsRoutes);
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
 
-// Start the server
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/food_saver', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.log(err));
+
+app.use('/auth', authRoutes);
+app.use('/listings', listingsRoutes);
+app.use('/requests', requestRoutes);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

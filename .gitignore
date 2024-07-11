@@ -29,3 +29,7 @@ pids
 
 # VSCode
 .vscode/
+
+node_modules/
+uploads/
+.env
