@@ -1,23 +1,34 @@
 # FoodSaver
 
-FoodSaver is a platform aimed at reducing food waste by facilitating the sharing of excess food with those in need.
+## Introduction
 
-## Description
+FoodSaver is a web application designed to reduce food waste by helping users manage their groceries and meal plans. The platform allows users to add and request food items, ensuring excess food is efficiently distributed to those in need. The application features a user-friendly interface, secure authentication, and a seamless user experience.
 
-FoodSaver provides users with the ability to:
-- Sign up and log in securely.
-- View available food listings.
-- Add listings to donate excess food.
-- Request food items from donors.
-- Receive notifications for new listings.
+- **Deployed Site:** [FoodSaver](https://kaymatic.github.io/FoodSaver_V1/)
+- **Final Project Blog Article:** [Project Blog Article](https://www.linkedin.com/pulse/introduction-foodsaver-project-emmanuel-darkoh-p8ptf)
+- **Author's LinkedIn:** [Emmanuel Darkoh](https://www.linkedin.com/in/emmanuel-darkoh-7730bb104/)
 
-## Team
+## Table of Contents
 
-FoodSaver is developed by Emmanuel Darkoh, a passionate student software engineer dedicated to humanitarian efforts.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Related Projects](#related-projects)
+- [Licensing](#licensing)
 
 ## Installation
 
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v12.x or later)
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+- [Git](https://git-scm.com/)
+
+### Steps
+
 1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd foodsaver
+
+   ```sh
+   git clone https://github.com/Kaymatic/FoodSaver_V1
+   cd foodSaver
