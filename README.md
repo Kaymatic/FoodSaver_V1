@@ -32,3 +32,19 @@ FoodSaver is a web application designed to reduce food waste by helping users ma
    ```sh
    git clone https://github.com/Kaymatic/FoodSaver_V1
    cd foodSaver
+
+
+Usage
+Features
+Sign Up & Login:
+
+New users can sign up and create an account.
+Existing users can log in to access their dashboard.
+Add Listing:
+
+Admin users can add food items to the listings.
+Listings can include images and detailed descriptions.
+Request Food:
+
+Users can browse available food items and request them.
+Requests are verified, and notifications are sent to users.
